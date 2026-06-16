@@ -3,104 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bom dia gatinha 😏</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            overflow: hidden;
-        }
-
-        .page {
-            display: none;
-            width: 100vw;
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 20px;
-            animation: fadeIn 0.5s ease-in;
-        }
-
-        .page.active {
-            display: flex;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .content {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 40px;
-            text-align: center;
-            max-width: 600px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .content h1 {
-            font-size: 24px;
-            color: #d946ef;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-
-        .btn {
-            padding: 15px 30px;
-            font-size: 16px;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            background: linear-gradient(135deg, #d946ef, #ec4899);
-            color: white;
-            font-weight: bold;
-            box-shadow: 0 4px 15px rgba(217, 70, 239, 0.4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(217, 70, 239, 0.6);
-        }
-    </style>
+    <title>Para Você ❤️</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- PÁGINA 1 -->
-    <div class="page active">
+    <div id="page1" class="page active" style="background-image: url('https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=1200&h=800&fit=crop');">
         <div class="content">
-            <h1>Bom dia gatinha 😏</h1>
+            <h1>Bom dia gatinha😏</h1>
             <div class="buttons-container">
-                <button class="btn" onclick="nextPage()">Bom dia</button>
-                <button class="btn" onclick="nextPage()">Nada ver</button>
+                <button class="btn btn-response" onclick="goToPage(2)">
+                    <span class="emoji">👋</span>
+                    <span>Bom dia</span>
+                </button>
+                <button class="btn btn-response" onclick="goToPage(2)">
+                    <span class="emoji">😒</span>
+                    <span>Nada ver</span>
+                </button>
             </div>
         </div>
     </div>
 
-    <!-- PÁGINA 2, 3, 4, 5... -->
-    <!-- (Código similar para as outras páginas) -->
+    <!-- PÁGINA 2 -->
+    <div id="page2" class="page" style="background-image: url('https://images.unsplash.com/photo-1535241749838-299277b6305f?w=1200&h=800&fit=crop');">
+        <div class="content">
+            <h1>Você chegou a tão pouco tempo e é uma das coisas mais importantes da minha vida, sou doido por você! Mas queria te perguntar...</h1>
+            <div class="buttons-container">
+                <button class="btn btn-primary" onclick="goToPage(3)">
+                    <span class="emoji">🚀</span>
+                    <span>Vamos lá</span>
+                </button>
+                <button class="btn btn-secondary" onclick="goToPage(3)">
+                    <span class="emoji">😅</span>
+                    <span>Vish...</span>
+                </button>
+            </div>
+        </div>
+    </div>
 
-    <script>
-        let currentPage = 1;
-        const totalPages = 5;
+    <!-- PÁGINA 3 -->
+    <div id="page3" class="page" style="background-image: url('https://images.unsplash.com/photo-1558788353-f76d92427f16?w=1200&h=800&fit=crop');">
+        <div class="content">
+            <h1>Eu fiquei sabendo que alguém estava sentimental hoje 😱😱😱<br>Então vamos melhorar isso. Escolhe uma das opções gostosa!</h1>
+            <div class="buttons-grid buttons-3x2">
+                <button class="btn btn-grid" onclick="goToPage(4)">
+                    <span class="emoji">🎉</span>
+                    <span>Bora sair?</span>
+                </button>
+                <button class="btn btn-grid" onclick="goToPage(4)">
+                    <span class="emoji">🍣</span>
+                    <span>Sushi</span>
+                </button>
+                <button class="btn btn-grid" onclick="goToPage(4)">
+                    <span class="emoji">🏖️</span>
+                    <span>Praia</span>
+                </button>
+                <button class="btn btn-grid" onclick="goToPage(4)">
+                    <span class="emoji">🍫</span>
+                    <span>Chocolate</span>
+                </button>
+                <button class="btn btn-grid" onclick="goToPage(4)">
+                    <span class="emoji">🤗</span>
+                    <span>Carinho</span>
+                </button>
+                <button class="btn btn-grid" onclick="goToPage(4)">
+                    <span class="emoji">🥂</span>
+                    <span>Jantar chique pa postá😏</span>
+                </button>
+            </div>
+        </div>
+    </div>
 
-        function nextPage() {
-            // Lógica para mudar de página
-        }
-    </script>
+    <!-- PÁGINA 4 -->
+    <div id="page4" class="page" style="background-image: url('https://images.unsplash.com/photo-1587300411107-ec0548f7f94f?w=1200&h=800&fit=crop');">
+        <div class="content">
+            <h1>Anotado! seu pedido está a caminho o mais rápido possível, afinal, seu desejo é uma ordem😉<br><br>Mas eu gostaria de um...</h1>
+            <div class="buttons-grid buttons-3x2-5">
+                <button class="btn btn-grid" onclick="goToPage(5)">
+                    <span class="emoji">🥤</span>
+                    <span>Milkshake do Mc Donald's hmmmmm</span>
+                </button>
+                <button class="btn btn-grid" onclick="goToPage(5)">
+                    <span class="emoji">🍦</span>
+                    <span>Sorvetin cremoso 😮‍💨😮‍💨</span>
+                </button>
+                <button class="btn btn-grid" onclick="goToPage(5)">
+                    <span class="emoji">🍔</span>
+                    <span>Hamburgão estoura artéria 🥶</span>
+                </button>
+                <button class="btn btn-grid" onclick="goToPage(5)">
+                    <span class="emoji">🍲</span>
+                    <span>Strogonoff no almoço jantar e até de ceia de Natal🥳🥳</span>
+                </button>
+                <button class="btn btn-grid" onclick="goToPage(5)">
+                    <span class="emoji">💋</span>
+                    <span>Chuva de beijos😁</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 5 (FINAL) -->
+    <div id="page5" class="page" style="background-image: url('https://images.unsplash.com/photo-1552053831-71594a27c62d?w=1200&h=800&fit=crop');">
+        <div class="content final-message">
+            <p>Fiz isso sem um propósito tão grande, mas é só uma forma de demonstrar o quanto é especial por essa intenção, e te lembrar que independente do momento: <strong>Estarei aqui.</strong></p>
+            
+            <p>Sou maluco por você e mesmo com o pouco tempo pra todas essas coisas e milhares de outras mais, vou estar contigo. E te lembrar que <strong>você é a garota mais especial que conheço,</strong> a saudade de você dói mas cada segundo vale a pena por ser você, mesmo se fossem anos.</p>
+            
+            <p class="final-greeting">Bom dia coisa linda😉<br>Beijo do Eduardo</p>
+
+            <div class="heart-animation">❤️</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
